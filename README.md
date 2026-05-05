@@ -2,10 +2,12 @@
 Spring Boot · Nginx · Resilience4j
 
 ## Architecture
-Nginx (port 80) — Reverse Proxy / Load Balancer (Round-Robin)
-  ├── /api/users   → User 1 :8081 (Circuit Breaker) | User 2 :8083
-  └── /api/products → Product 1 :8082 (Bulkhead)    | Product 2 :8084
 
+```
+Nginx (port 80) — Reverse Proxy / Load Balancer (Round-Robin)
+├── /api/users    → User 1 :8081 (Circuit Breaker) | User 2 :8083
+└── /api/products → Product 1 :8082 (Bulkhead)     | Product 2 :8084
+```
 ## Patterns
 
 ### Circuit Breaker — User 1 (port 8081)
