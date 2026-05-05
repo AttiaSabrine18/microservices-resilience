@@ -36,11 +36,12 @@ Nginx (port 80) — Reverse Proxy / Load Balancer (Round-Robin)
 ## Démarrage
 
 ### 1. Build
+```
 cd user-service-1    && mvn clean package -DskipTests
 cd ../user-service-2    && mvn clean package -DskipTests
 cd ../product-service-1 && mvn clean package -DskipTests
 cd ../product-service-2 && mvn clean package -DskipTests
-
+```
 ### 2. Lancer les instances
 java -jar user-service-1/target/*.jar    --server.port=8081
 java -jar user-service-2/target/*.jar    --server.port=8083
