@@ -43,11 +43,12 @@ cd ../product-service-1 && mvn clean package -DskipTests
 cd ../product-service-2 && mvn clean package -DskipTests
 ```
 ### 2. Lancer les instances
+```
 java -jar user-service-1/target/*.jar    --server.port=8081
 java -jar user-service-2/target/*.jar    --server.port=8083
 java -jar product-service-1/target/*.jar --server.port=8082
 java -jar product-service-2/target/*.jar --server.port=8084
-
+```
 ### 3. Nginx
 nginx -c nginx/nginx.conf
 
@@ -74,12 +75,13 @@ curl http://localhost:8081/actuator/circuitbreakers
 curl http://localhost:8082/actuator/bulkheads
 
 ## Structure
+```
 ├── user-service-1/     # Circuit Breaker
 ├── user-service-2/     # Instance standard
 ├── product-service-1/  # Bulkhead
 ├── product-service-2/  # Instance standard
 ├── nginx/              # nginx.conf
 └── deploy/             # Scripts .bat et .sh
-
+```
 ---
 Auteur : Sabrine Attia & Raoua benhamed 
