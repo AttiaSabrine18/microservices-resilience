@@ -79,4 +79,4 @@ curl http://localhost:8082/actuator/bulkheads
 └── deploy/             # Scripts .bat et .sh
 
 ---
-Auteur : Sabrine & Riri — 2026
+Auteur : Sabrine Attia & Raoua benhamed 
